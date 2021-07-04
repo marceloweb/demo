@@ -8,7 +8,7 @@ node {
         commit_id = readFile('.git/commit-id').trim()
       }
       stage('test') {
-        sh './mvnw install && ./mvnw test && ./mvnw package'        
+        sh './gradlew test && ./gradlew build'        
       }
     } catch(e) {
       throw e;
